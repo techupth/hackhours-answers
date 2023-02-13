@@ -1,4 +1,5 @@
 # hackhours-answers
+Hack hours answer repository. 
 
 ## How-to-Access-to-Answer-Branch
 
