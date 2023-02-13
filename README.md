@@ -1,5 +1,6 @@
 # hackhours-answers
 
-## How to Access to
+## How-to-Access-to-Answer-Branch
 
-Checkout to other branches to view hack hours answers by the Hack Hours Repository's name. For example, "js-hh-variables-mind-test" to "js-hh-variables".
+Checkout to other branches to view hack hours answers by the Hack Hours Repository's name.
+For example, "js-hh-variables-mind-test" to "js-hh-variables".
