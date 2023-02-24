@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Components HH EX 1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+
+    <script type="text/babel">
+      const rootElement = document.querySelector("#root");
+
+      // Start coding here
+      function Link() {
+        return <a href="https://www.techupth.com">techupth.com</a>;
+      }
+      const app = (
+        <div className="container">
+          <header>
+            <h1>Website Header</h1>
+            <Link />
+          </header>
+          <main>
+            <h1>Main Section</h1>
+            <Link />
+          </main>
+          <footer>
+            <h1>Website Footer</h1>
+            <Link />
+          </footer>
+        </div>
+      );
+
+      ReactDOM.render(app, rootElement);
+    </script>
+  </body>
+</html>
