@@ -1,0 +1,37 @@
+/* Style for the article container */
+.article {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #e6f2ff, #fff);
+}
+
+/* Style for the article title */
+.article-title {
+  font-size: 24px;
+  margin-top: 0;
+  color: #333;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Style for the article body */
+.article-body {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #555;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Style for the article link */
+.article-link {
+  color: #007bff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Style for the article link when hovered over */
+.article-link:hover {
+  color: #0062cc;
+  text-decoration: underline;
+}
