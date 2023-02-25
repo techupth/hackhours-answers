@@ -54,9 +54,9 @@ function App() {
       </Box>
       <Box>
         <Stack spacing={3}>
-          <Input placeholder="small size" size="sm" />
-          <Input placeholder="medium size" size="md" />
-          <Input placeholder="large size" size="lg" />
+          <Input placeholder="small size" variant="outline" size="sm" />
+          <Input placeholder="medium size" variant="filled" size="md" />
+          <Input placeholder="large size" variant="flushed" size="lg" />
         </Stack>
       </Box> */}
     </>
