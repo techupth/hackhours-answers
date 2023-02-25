@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: lightcyan;
+  padding: 40px;
+}
+
+main {
+  background-color: lightsteelblue;
+  padding: 40px;
+  height: 700px;
+}
+
+footer {
+  background-color: cornsilk;
+  padding: 40px;
+  height: 230px;
+}

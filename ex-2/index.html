@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Props HH Ex 2</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+
+    <script type="text/babel">
+      const rootElement = document.querySelector("#root");
+
+      const article1 = {
+        title: "My Lovely Dog",
+        image: "https://placedog.net/500",
+        content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Praesent vehicula sollicitudin elit. Sed justo leo,
+          consequat ac tortor a, aliquet ultricies nisi. Vestibulum in volutpat lorem`,
+        author: "John",
+      };
+
+      const article2 = {
+        title: "Hello Hoomannnn :D",
+        image: "https://placedog.net/500/300",
+        content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Praesent vehicula sollicitudin elit. Sed justo leo,
+          consequat ac tortor a, aliquet ultricies nisi. Vestibulum in volutpat lorem`,
+        author: "James",
+      };
+
+      function Article(props) {
+        return (
+          <div className="article">
+            <div className="article-title">Title:{props.content.title} </div>
+            <div className="article-image">
+              Preview Image: <img src={props.content.image} />{" "}
+            </div>
+            <div className="article-content">
+              Content:{props.content.content}{" "}
+            </div>
+            <div className="article-author">Author:{props.content.author} </div>
+          </div>
+        );
+      }
+
+      // Start coding here
+      const app = (
+        <div className="container">
+          <Article content={article1} />
+          <hr />
+          <Article content={article2} />
+          <hr />
+        </div>
+      );
+
+      ReactDOM.render(app, rootElement);
+    </script>
+  </body>
+</html>
