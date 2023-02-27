@@ -1,0 +1,20 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.greeting-container {
+  font-size: 70px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: lightseagreen;
+  border-radius: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  font-size: xx-large;
+}
