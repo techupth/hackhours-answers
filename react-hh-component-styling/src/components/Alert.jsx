@@ -1,25 +1,26 @@
-// Start coding here
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-import errorIcon from "../assets/logo/alert-frown.svg";
-import warningIcon from "../assets/logo/alert-triangle.svg";
-import infoIcon from "../assets/logo/alert-circle.svg";
-import successIcon from "../assets/logo/alert-check-circle.svg";
+import ErrorIcon from "../assets/icons/frown.jsx";
+import WarningIcon from "../assets/icons/alert-triangle.jsx";
+import InfoIcon from "../assets/icons/alert-circle.jsx";
+import SuccessIcon from "../assets/icons/check-circle.jsx";
 
 function Alert(props) {
   let bgColor = "#F9EBC8";
-  let icon = infoIcon;
+  let AlertIcon = InfoIcon;
+
   if (props.severity === "error") {
     bgColor = "#F9C8C8";
-    icon = errorIcon;
+    AlertIcon = ErrorIcon;
   } else if (props.severity === "warning") {
     bgColor = "#F9D9C8";
-    icon = warningIcon;
+    AlertIcon = WarningIcon;
   } else if (props.severity === "success") {
     bgColor = "#CEF7CD";
-    icon = successIcon;
+    AlertIcon = SuccessIcon;
   }
+
   return (
     <div
       css={css`
@@ -36,18 +37,15 @@ function Alert(props) {
         color: #444444;
         border-radius: 10px;
         background-color: ${bgColor};
-
-        &::before {
-          content: url(${icon});
-          position: block;
-          left: -35px;
-          font-size: 35px;
-          padding-right: 10px;
-          text-align: center;
-          display: inline;
-        }
       `}
     >
+      <div
+        css={css`
+          margin-right: 20px;
+        `}
+      >
+        <AlertIcon />
+      </div>
       {props.children}
     </div>
   );
