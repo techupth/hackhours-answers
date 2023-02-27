@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("Greeting Message");
   const [greetingTextInput, setGreetingTextInput] = useState("");
 
   const handleTextInputChange = (e) => {
