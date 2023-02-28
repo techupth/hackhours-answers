@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: hsl(0, 60%, 20%);
+  --secondary-color: hsl(0, 60%, 35%);
+  --highlight-color: antiquewhite;
+
+  --text-primary-color: var(var(--primary-color));
+
+  --muted-color-100: azure;
+}
+
+body {
+  font-family: kanit;
+  padding: 50px;
+  background-color: var(--muted-color-100);
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-wrapper .app-title {
+  font-size: 60px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-item {
+  font-size: 30px;
+  color: var(--primary-color);
+  background-color: var(--highlight-color);
+  border-radius: 10px;
+  border: 5px solid var(--secondary-color);
+  padding: 40px;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.post-item .post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.post-item .post-content {
+  margin-bottom: 30px;
+}
+
+.post-actions .like-button {
+  margin-right: 30px;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border-radius: 30px;
+  padding: 20px;
+  width: 256px;
+  color: white;
+  font-size: 30px;
+  outline: none;
+  border: 5px solid var(--secondary-color);
+}
