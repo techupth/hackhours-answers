@@ -11,13 +11,13 @@ function App() {
     getProductData();
   }, []);
 
-  async function handleDelete(id) {
+  const handleDelet = async (id) => {
     await axios.delete(`http://localhost:4001/products/${id}`);
     const newResponse = productData.filter((item) => {
       return item.id !== id;
     });
     setProductData(newResponse);
-  }
+  };
 
   const getProductData = async () => {
     const response = await axios.get("http://localhost:4001/products");
@@ -75,7 +75,7 @@ export default App;
 //     getProductData();
 //   }, []);
 
-//   async function handleDelete(id) {
+//   const handleDelet = async (id) => {
 //     try {
 //       await axios.delete(`http://localhost:4001/products/${id}`);
 //       const newResponse = productData.filter((item) => {
