@@ -1,13 +1,13 @@
 // Start coding here
 import express from "express";
-import bodyParser from "body-parser";
 import { assignments } from "./data/assignments.js";
 import { comments } from "./data/comments.js";
 
 const app = express();
 const port = 4001;
 
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // ระบบสามารถที่จะดูรายการของ Assignment ทั้งหมดได้
 app.get("/assignments", (req, res) => {
