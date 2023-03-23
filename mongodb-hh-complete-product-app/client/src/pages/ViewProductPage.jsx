@@ -18,8 +18,6 @@ function ViewProductPage() {
     getProduct();
   }, []);
 
-  console.log(product);
-
   return (
     <div>
       <h1>View Product Page</h1>

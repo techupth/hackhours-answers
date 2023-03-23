@@ -12,16 +12,16 @@ productRouter.get("/", async (req, res) => {
     if (name) {
       query.name = new RegExp(name, "i");
     }
-
     if (category) {
       query.category = new RegExp(category, "i");
     }
-    console.log(query);
     const collection = db.collection("products");
     const allProducts = await collection.find(query).limit(10).toArray();
     return res.json({ data: allProducts });
   } catch (error) {
-    console.log(error);
+    return res.json({
+      message: `${error}`,
+    });
   }
 });
 
@@ -34,7 +34,9 @@ productRouter.get("/:id", async (req, res) => {
 
     return res.json({ data: productById });
   } catch (error) {
-    console.log(error);
+    return res.json({
+      message: `${error}`,
+    });
   }
 });
 
@@ -47,7 +49,9 @@ productRouter.post("/", async (req, res) => {
       message: `Product Id ${newProductData.insertedId} has been created successfully`,
     });
   } catch (error) {
-    console.log(error);
+    return res.json({
+      message: `${error}`,
+    });
   }
 });
 
@@ -61,7 +65,7 @@ productRouter.put("/:id", async (req, res) => {
     // นำ productId จาก Endpoint parameter มา Assign ลงใน Variable `productId`
     // โดยที่ใช้ ObjectId ที่ Import มาจากด้านบน ในการ Convert Type ด้วย
     const productId = new ObjectId(req.params.id);
-    console.log(productId);
+
     const updatedProductData = await collection.updateOne(
       {
         _id: productId,
@@ -74,7 +78,9 @@ productRouter.put("/:id", async (req, res) => {
       message: `Movie record ${productId} has been updated successfully`,
     });
   } catch (error) {
-    console.log(error);
+    return res.json({
+      message: `${error}`,
+    });
   }
 });
 
@@ -88,7 +94,9 @@ productRouter.delete("/:id", async (req, res) => {
       message: `Movie record ${productId} has been deleted successfully`,
     });
   } catch (error) {
-    console.log(error);
+    return res.json({
+      message: `${error}`,
+    });
   }
 });
 

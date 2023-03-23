@@ -11,7 +11,7 @@ function CreateProductForm() {
 
   const navigate = useNavigate();
 
-  const createProducts = async () => {
+  const createProduct = async () => {
     await axios.post("http://localhost:4001/products", {
       name,
       image: imageUrl,
@@ -24,7 +24,7 @@ function CreateProductForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    createProducts();
+    createProduct();
   };
 
   return (
