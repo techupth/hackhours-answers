@@ -23,7 +23,7 @@ const usePosts = () => {
       const results = await axios.get(
         `http://localhost:4000/posts?${params.toString()}`
       );
-      console.log(results.data.data);
+
       setPosts(results.data.data);
       setTotalPages(results.data.total_pages);
       setIsLoading(false);
