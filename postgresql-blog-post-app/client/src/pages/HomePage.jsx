@@ -13,8 +13,13 @@ function HomePage() {
     usePosts();
 
   useEffect(() => {
+    let isMounted = true;
     getPosts({ status, keywords, page });
+    return () => {
+      isMounted = false;
+    };
   }, [status, keywords, page]);
+
   return (
     <div>
       <div className="app-wrapper">

@@ -15,30 +15,39 @@ postRouter.get("/", async (req, res) => {
     let query = "";
     let values = [];
     if (status && keywords) {
+      console.log("both");
       query =
         "select * ,count(*)over() from posts where status=$1 and title ilike $2 limit $3 offset $4";
       values = [status, keywords, PAGE_SIZE, offset];
     } else if (keywords) {
+      console.log("key");
+      console.log(keywords);
       query =
-        "select *, count(*)over() from posts where title ilike $1 limit $2 offset $3";
+        "select * ,count(*)over() from posts where title ilike $1 limit $2 offset $3";
       values = [keywords, PAGE_SIZE, offset];
     } else if (status) {
+      console.log("status");
       query =
-        "select *, count(*)over() from posts where status=$1 limit $2 offset $3";
+        "select * ,count(*)over() from posts where status=$1 limit $2 offset $3";
       values = [status, PAGE_SIZE, offset];
     } else {
+      console.log("none");
       query = "select * ,count(*)over() from posts limit $1 offset $2";
       values = [PAGE_SIZE, offset];
     }
 
     const result = await pool.query(query, values);
-    // const totalPage = await pool.query("select count(post_id) from posts");
-    console.log(result.rows);
+
+    let totalResultCount = 0;
+    if (result.rows.length != 0) {
+      totalResultCount = result.rows[0].count;
+    }
     return res.json({
       data: result.rows,
-      total_pages: Math.ceil(result.rows[0].count / PAGE_SIZE),
+      total_pages: Math.ceil(totalResultCount / PAGE_SIZE),
     });
   } catch (error) {
+    console.log(error);
     return res.json({
       message: Error`${error}`,
     });

@@ -15,7 +15,7 @@ const usePosts = () => {
     try {
       const params = new URLSearchParams();
       params.append("status", status);
-      params.append("keywords", keywords);
+      params.append("keywords", `%${keywords}%`);
       params.append("page", page);
 
       setIsError(false);
@@ -23,6 +23,7 @@ const usePosts = () => {
       const results = await axios.get(
         `http://localhost:4000/posts?${params.toString()}`
       );
+      console.log(results.data.data);
       setPosts(results.data.data);
       setTotalPages(results.data.total_pages);
       setIsLoading(false);
