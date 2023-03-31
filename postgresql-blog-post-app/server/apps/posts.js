@@ -15,23 +15,18 @@ postRouter.get("/", async (req, res) => {
     let query = "";
     let values = [];
     if (status && keywords) {
-      console.log("both");
       query =
         "select * ,count(*)over() from posts where status=$1 and title ilike $2 limit $3 offset $4";
       values = [status, keywords, PAGE_SIZE, offset];
     } else if (keywords) {
-      console.log("key");
-      console.log(keywords);
       query =
         "select * ,count(*)over() from posts where title ilike $1 limit $2 offset $3";
       values = [keywords, PAGE_SIZE, offset];
     } else if (status) {
-      console.log("status");
       query =
         "select * ,count(*)over() from posts where status=$1 limit $2 offset $3";
       values = [status, PAGE_SIZE, offset];
     } else {
-      console.log("none");
       query = "select * ,count(*)over() from posts limit $1 offset $2";
       values = [PAGE_SIZE, offset];
     }
