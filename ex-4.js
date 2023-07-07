@@ -8,7 +8,10 @@ const todos = [
 ];
 
 function getCompletedTodo(todos) {
-  const completedTodos = todos.filter((todo) => todo.completed === true);
+  const completedTodos = todos.filter((todo) => {
+    // หรืออาจจะเขียนแบบนี้ได้ return todo.completed ซึ่งมีค่าเท่ากันกับบรรทัดด้านล่าง
+    return todo.completed === true;
+  });
   return completedTodos;
 }
 
