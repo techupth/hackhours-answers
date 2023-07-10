@@ -24,7 +24,7 @@ console.log(`Average score is ${averageScore}`);
 let maxScore;
 let maxScoreName;
 for (let key in studentsScore) {
-  if (maxScore === undefined) {
+  if (!maxScore === undefined) {
     maxScore = studentsScore[key];
     maxScoreName = key;
   }
