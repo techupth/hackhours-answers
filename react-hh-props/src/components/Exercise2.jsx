@@ -1,5 +1,18 @@
 import React from "react";
 
+const Article = (props) => {
+  return (
+    <div className="article">
+      <div className="article-title">Title: {props.title}</div>
+      <div className="article-image">
+        Preview Image: <img src={props.image} />
+      </div>
+      <div className="article-content">Content: {props.content}</div>
+      <div className="article-author">Author: {props.author}</div>
+    </div>
+  );
+};
+
 const Exercise2 = () => {
   const article1 = {
     title: "My Lovely Dog",
@@ -19,18 +32,23 @@ const Exercise2 = () => {
     author: "James",
   };
 
-  function Article() {
-    return (
-      <div className="article">
-        <div className="article-title">Title: </div>
-        <div className="article-image">Preview Image: </div>
-        <div className="article-content">Content: </div>
-        <div className="article-author">Author: </div>
-      </div>
-    );
-  }
-
-  return <div className="container">{/* Start Coding Here */}</div>;
+  return (
+    <div className="container">
+      <Article
+        title={article1.title}
+        author={article1.author}
+        image={article1.image}
+        content={article1.content}
+      />
+      <hr />
+      <Article
+        title={article2.title}
+        author={article2.author}
+        image={article2.image}
+        content={article2.content}
+      />
+    </div>
+  );
 };
 
 export default Exercise2;

@@ -8,10 +8,10 @@ function App() {
   return (
     <>
       {/* Uncomment เพื่อ render Component ที่ต้องการ */}
-      <Exercise1 />
+      {/* <Exercise1 /> */}
       {/* <Exercise2 /> */}
       {/* <Exercise3 /> */}
-      {/* <Exercise4 /> */}
+      <Exercise4 />
     </>
   );
 }
