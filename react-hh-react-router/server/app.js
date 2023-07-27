@@ -21,8 +21,6 @@ let products = [
 
 const app = express();
 const port = 4001;
-// แก้ไข bug create product จาก array เปล่า
-let id = 0;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -53,13 +51,22 @@ app.get("/products/:id", (req, res) => {
     data: product[0],
   });
 });
-// แก้ไข bug create product จาก array เปล่า
+
 app.post("/products", (req, res) => {
+  let newProductId;
+  let latestProductId = products[products.length - 1]?.id;
+
+  if (latestProductId) {
+    newProductId = latestProductId + 1;
+  } else {
+    newProductId = 1;
+  }
+
   products.push({
-    id: id,
+    id: newProductId,
     ...req.body,
   });
-  id++;
+
   return res.json({
     message: "Product has been created.",
   });
