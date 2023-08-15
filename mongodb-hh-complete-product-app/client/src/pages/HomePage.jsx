@@ -15,7 +15,7 @@ function HomePage() {
     try {
       setIsError(false);
       setIsLoading(true);
-      const results = await axios(
+      const results = await axios.get(
         `http://localhost:4001/products?keywords=${searchText}&category=${category}`
       );
       setProducts(results.data.data);
@@ -28,8 +28,11 @@ function HomePage() {
 
   const deleteProduct = async (productId, index) => {
     await axios.delete(`http://localhost:4001/products/${productId}`);
-    products.splice(index, 1);
-    setProducts(products);
+    // Clone state เก่ามาก่อน แล้วค่อยแก้เป็น State อันใหม่
+    // จากนั้นก็ค่อย Update ตัว State
+    const newProducts = [...products];
+    newProducts.splice(index, 1);
+    setProducts(newProducts);
   };
 
   const handleSearchText = (e) => {
@@ -110,7 +113,11 @@ function HomePage() {
                 <h3>Category: {product.category}</h3>
                 <h3>
                   Created Time:{" "}
-                  {new Date(product.created_at).toISOString().substring(0, 10)}
+                  {product.created_at
+                    ? new Date(product.created_at)
+                        .toISOString()
+                        .substring(0, 10)
+                    : "-"}
                 </h3>
                 <p>Product description: {product.description} </p>
                 <div className="product-actions">

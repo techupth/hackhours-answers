@@ -66,7 +66,7 @@ productRouter.put("/:id", async (req, res) => {
     // โดยที่ใช้ ObjectId ที่ Import มาจากด้านบน ในการ Convert Type ด้วย
     const productId = new ObjectId(req.params.id);
 
-    const updatedProductData = await collection.updateOne(
+    await collection.updateOne(
       {
         _id: productId,
       },
@@ -88,6 +88,7 @@ productRouter.delete("/:id", async (req, res) => {
   try {
     const collection = db.collection("products");
     const productId = new ObjectId(req.params.id);
+
     await collection.deleteOne({ _id: productId });
 
     return res.json({
