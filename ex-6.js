@@ -9,7 +9,7 @@ function updateCarCollection(carBrand) {
     } position of car collection.`;
   } else {
     carCollection.push(carBrand);
-    return `new car collection is : ${carCollection}`;
+    return `new car collection is : ${carCollection}.`;
   }
 }
 
