@@ -1,10 +1,10 @@
 //Exercise #2: At Least Five Function
 
-function atLeastFive(array, callback) {
+function atLeastFive(array, operation) {
   // Start coding here
   let count = 0;
   for (let i = 0; i < array.length; i++) {
-    if (callback(array[i])) {
+    if (operation(array[i])) {
       count++;
     }
   }

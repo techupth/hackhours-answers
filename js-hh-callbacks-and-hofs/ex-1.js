@@ -1,9 +1,9 @@
 // Exercise #1: For Each Function
 
-function forEach(array, callback) {
+function forEach(array, operation) {
   // Start coding here
   for (let i = 0; i < array.length; i++) {
-    callback(array[i]);
+    operation(array[i]);
   }
 }
 
