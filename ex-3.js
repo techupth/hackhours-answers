@@ -1,6 +1,5 @@
 //Exercise 3
 // Ternary Operator
-// Start coding here.
 let lightBulbStatus = "Off";
 
 lightBulbStatus === "On"

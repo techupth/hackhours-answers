@@ -1,7 +1,6 @@
 //Exercise 4
 // Switch Statement
-// Start coding here.
-let lightBulbStatus = "Off";
+let lightBulbStatus = "On";
 
 switch (lightBulbStatus) {
   case "On":
@@ -11,7 +10,7 @@ switch (lightBulbStatus) {
     console.log("Light bulb is Off.");
     break;
   case "Broken":
-    console.log("Light bulb is broken.");
+    console.log("Light bulb is Broken.");
     break;
   default:
     console.log("Please choose the correct input (On/Off/Broken)");
