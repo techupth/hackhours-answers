@@ -375,7 +375,7 @@ const bills = [
 ];
 
 // Start coding here
-const uniqueMemberCount = bills
+const totalMembers = bills
   .filter(function (bill) {
     return bill.member !== null;
   })
@@ -389,4 +389,4 @@ const uniqueMemberCount = bills
     return accumulator;
   }, []).length;
 
-console.log("Unique Members Count: ", uniqueMemberCount);
+console.log("Unique Members Count: ", totalMembers);
