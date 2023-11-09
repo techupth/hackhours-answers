@@ -1,4 +1,3 @@
-// Exercise #5 Min Function
 // Start coding here
 const findMinNumber = (a, b) => Math.min(a, b);
 

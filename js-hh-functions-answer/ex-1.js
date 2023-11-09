@@ -1,4 +1,3 @@
-// Exercise #1 Declaring Functions
 // Start coding here
 function add(a, b) {
   return a + b;

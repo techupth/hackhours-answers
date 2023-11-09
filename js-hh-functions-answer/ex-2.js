@@ -1,4 +1,3 @@
-// Exercise #2 Declaring Function Expression
 // Start coding here
 const add = function (a, b) {
   return a + b;
