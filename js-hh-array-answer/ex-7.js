@@ -41,14 +41,24 @@ let orders = [
   },
 ];
 // Start coding here
+
+// เฉลยข้อ 1)
 let isArray = Array.isArray(orders);
+
+// เฉลยข้อ 2)
 let creditCardTypeOfBlindermann = orders[2].creditCardType;
 
+// เฉลยข้อ 3)
 orders[2].creditCardType = "visa";
 
-let totalPurchaseOfJoannet = orders[3].productQuantity;
+// เฉลยข้อ 4)
+let productQuantityOfJoannet = orders[3].productQuantity;
+
+// เฉลยข้อ 5)
 let totalPurchaseOfDary = orders[1].productPrice * orders[1].productQuantity;
 
+// เฉลยข้อ 6)
 orders.shift();
 
+// เฉลยข้อ 7)
 console.log(orders);
