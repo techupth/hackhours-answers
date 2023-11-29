@@ -5,16 +5,16 @@ let memberLevel = "Gold";
 let lastMonthPaid = 4001;
 
 let lastMonthPaidMoreThan4000 = lastMonthPaid > 4000;
-let isWeekday = false;
-let hasNotBoughtProductFromITCategory = true;
-let hasNotAttendedDiscountEvent = false;
+let isWeekday = true;
+let hasBoughtProductFromITCategory = false;
+let hasAttendedDiscountEvent = true;
 let isPlatinum = memberLevel == "Platinum";
 
 let hasPromotion =
   (lastMonthPaidMoreThan4000 &&
-    !isWeekday &&
-    hasNotBoughtProductFromITCategory &&
-    hasNotAttendedDiscountEvent) ||
+    isWeekday &&
+    !hasBoughtProductFromITCategory &&
+    !hasAttendedDiscountEvent) ||
   isPlatinum;
 
 console.log(hasPromotion);
