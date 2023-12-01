@@ -1,10 +1,11 @@
-//Exercise 4
-let companyName = "TechUp Thailand";
-let reversedCompanyName = "";
+let restaurants = ["KFC", "MOMO PARADISE", "Nabezo"];
+let newRestaurants = [];
 
 // Start coding here
-for (let i = 0; i < companyName.length; i++) {
-  reversedCompanyName = companyName[i] + reversedCompanyName;
+let i = 0;
+while (i < restaurants.length) {
+  newRestaurants.push(`Restaurant Name: ${restaurants[i]}`);
+  i++;
 }
 
-console.log(reversedCompanyName);
+console.log(newRestaurants);

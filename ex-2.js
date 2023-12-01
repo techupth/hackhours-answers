@@ -1,12 +1,8 @@
-//Exercise 2
-let restaurants = ["KFC", "MOMO PARADISE", "Nabezo"];
-let newRestaurants = [];
+let numbers = [10, 20, 30, 40, 50];
+let total = 0;
 
-// Start coding here
-let i = 0;
-while (i < restaurants.length) {
-  newRestaurants.push(`Restaurant Name: ${restaurants[i]}`);
-  i++;
+for (let i = 0; i < numbers.length; i++) {
+  total = total + numbers[i];
 }
 
-console.log(newRestaurants);
+console.log(total);
