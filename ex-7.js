@@ -1,11 +1,7 @@
 //ex-7
-function isPalindrome(string) {
+function isPalindrome(word) {
   // Start coding here
-  if (string === string.split("").reverse().join("")) {
-    return true;
-  } else {
-    return false;
-  }
+  return word.trim() === word.trim().split("").reverse().join("");
 }
 
 //Example case

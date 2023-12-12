@@ -376,13 +376,12 @@ const bills = [
 
 // Start coding here
 
-function filterNull(input) {
-  return input.member !== null;
-}
+const billMembers = bills
+  .filter((bill) => {
+    return bill.member !== null;
+  })
+  .map((bill) => {
+    return bill.member.name;
+  });
 
-function pullMemberName(input) {
-  return input.member.name;
-}
-
-const billMembers = bills.filter(filterNull).map(pullMemberName);
 console.log("billMembers: ", billMembers);
