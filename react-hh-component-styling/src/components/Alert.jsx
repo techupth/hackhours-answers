@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
+// ในตัวอย่างเฉลยเราจะใช้ SVG แต่ถ้าใครใช้รูปภาพก็สามารถใช้แนวทางนี้ได้เหมือนกัน
 import ErrorIcon from "../assets/icons/frown.jsx";
 import WarningIcon from "../assets/icons/alert-triangle.jsx";
 import InfoIcon from "../assets/icons/alert-circle.jsx";
@@ -46,7 +47,7 @@ function Alert(props) {
       >
         <AlertIcon />
       </div>
-      {props.children}
+      {props.message}
     </div>
   );
 }

@@ -25,7 +25,7 @@ function Button(props) {
         font-family: "Sarabun", sans-serif;
       `}
     >
-      {props.children}
+      {props.text}
     </button>
   );
 }
