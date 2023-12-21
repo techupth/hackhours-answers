@@ -18,6 +18,7 @@ function ProductForm() {
 
     alert(JSON.stringify(newFormData));
 
+    // Set เพื่อให้ Input แสดงข้อความว่างๆ
     setName("");
     setImage("");
     setPrice("");
