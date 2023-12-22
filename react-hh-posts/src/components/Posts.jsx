@@ -1,49 +1,66 @@
+// 1)
 import { useState } from "react";
 import { postData } from "../raw-data/post-data";
 
 function Posts() {
-  const [posts, setPosts] = useState(postData);
+  // 2) สร้าง State
+  const [postList, setPostList] = useState(postData);
 
-  function handleLike(postIndex) {
-    let newPosts = [...posts];
-    newPosts[postIndex].likes = newPosts[postIndex].likes + 1;
-    setPosts(newPosts);
-  }
+  const likePost = (postIndex) => {
+    // 4) เขียน Logic ในการ Update `postList` state
+    // [{}, {}]
+    // 4.1) Clone array
+    const newPostList = [...postList];
+    // 4.2) Ressign ตัว Property `likes` ของ Object ตาม index
+    newPostList[postIndex].likes = newPostList[postIndex].likes + 1;
+    // 4.3) Update ตัว State `postList`
+    setPostList(newPostList);
+  };
 
-  function handleDislike(postIndex) {
-    let newPosts = [...posts];
-    // ใส่ conditional logic เพิ่มเข้าไปเพื่อไม่ให้ like เป็นเลขติดลบ
-    if (newPosts[postIndex].likes !== 0) {
-      newPosts[postIndex].likes = newPosts[postIndex].likes - 1;
-      setPosts(newPosts);
+  const dislikePost = (postIndex) => {
+    // 5) เขียน Logic ในการ Update `postList` state
+    // [{}, {}]
+    // 5.1) Clone array
+    const newPostList = [...postList];
+    // 5.2) Ressign ตัว Property `likes` ของ Object ตาม index
+    // ใส่ Conditional Logic เข้าไปครอบ ไม่ให้ Like ติดลบ
+    if (newPostList[postIndex].likes > 0) {
+      newPostList[postIndex].likes = newPostList[postIndex].likes - 1;
+      // 5.3) Update ตัว State `postList`
+      setPostList(newPostList);
     }
-  }
+  };
 
   return (
-    <div className="app-wrapper">
-      <h1 className="app-title">Posts</h1>
-      <div className="post-list">
-        {posts.map((item, index) => {
+    <div class="app-wrapper">
+      <h1 class="app-title">Posts</h1>
+      <div class="post-list">
+        {/* 3) เอา postList มา Render เป็น List item ด้วย Array.map */}
+        {postList.map((post, index) => {
           return (
-            <div className="post-item" key={item.id}>
-              <div className="post-header">
-                <h2>Post Title #{item.id}</h2>
-                <div className="post-social-media-stats">
-                  <span className="stats-topic">Likes: </span>
-                  <span className="post-likes">{item.likes}</span>
+            <div key={index} class="post-item">
+              <div class="post-header">
+                <h2>{post.title}</h2>
+                <div class="post-social-media-stats">
+                  <span class="stats-topic">Likes: </span>
+                  <span class="post-likes">{post.likes}</span>
                 </div>
               </div>
-              <p className="post-content">{item.content}</p>
-              <div className="post-actions">
+              <p class="post-content">{post.content}</p>
+              <div class="post-actions">
                 <button
-                  className="like-button"
-                  onClick={() => handleLike(index)}
+                  class="like-button"
+                  onClick={() => {
+                    likePost(index);
+                  }}
                 >
                   Like
                 </button>
                 <button
-                  className="dislike-button"
-                  onClick={() => handleDislike(index)}
+                  class="dislike-button"
+                  onClick={() => {
+                    dislikePost(index);
+                  }}
                 >
                   Dislike
                 </button>
