@@ -44,6 +44,7 @@ function CreateProductForm() {
             onChange={(e) => {
               setNameInput(e.target.value);
             }}
+            value={nameInput}
           />
         </label>
       </div>
@@ -58,6 +59,7 @@ function CreateProductForm() {
             onChange={(e) => {
               setImgInput(e.target.value);
             }}
+            value={imgInput}
           />
         </label>
       </div>
@@ -72,6 +74,7 @@ function CreateProductForm() {
             onChange={(e) => {
               setPriceInput(e.target.value);
             }}
+            value={priceInput}
           />
         </label>
       </div>
@@ -86,6 +89,7 @@ function CreateProductForm() {
             onChange={(e) => {
               setDescrInput(e.target.value);
             }}
+            value={descrInput}
             rows={4}
             cols={30}
           />

@@ -4,9 +4,9 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function EditProductForm() {
   const [name, setName] = useState("");
-  const [img, setImg] = useState("");
+  const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
-  const [descr, setDescr] = useState("");
+  const [description, setDescription] = useState("");
 
   const navigate = useNavigate();
   const param = useParams();
@@ -25,8 +25,8 @@ function EditProductForm() {
       const newProduct = {
         name: name,
         price: price,
-        image: img,
-        description: descr,
+        image: image,
+        description: description,
       };
       await axios.put(
         `http://localhost:4001/products/${param.productId}`,
@@ -43,7 +43,7 @@ function EditProductForm() {
       `http://localhost:4001/products/${param.productId}`
     );
     setName(response.data.data.name);
-    setImg(response.data.data.image);
+    setImage(response.data.data.image);
     setPrice(response.data.data.price);
     setDescr(response.data.data.description);
   };
@@ -75,7 +75,7 @@ function EditProductForm() {
             type="text"
             placeholder="Enter image url here"
             onChange={(e) => {
-              setImg(e.target.value);
+              setImage(e.target.value);
             }}
             value={img}
           />
@@ -105,7 +105,7 @@ function EditProductForm() {
             type="text"
             placeholder="Enter description here"
             onChange={(e) => {
-              setDescr(e.target.value);
+              setDescription(e.target.value);
             }}
             rows={4}
             cols={30}

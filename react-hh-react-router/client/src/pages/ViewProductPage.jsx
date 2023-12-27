@@ -6,7 +6,7 @@ function ViewProductPage() {
   const [name, setName] = useState("");
   const [img, setImg] = useState("");
   const [price, setPrice] = useState("");
-  const [descr, setDescr] = useState("");
+  const [description, setDescription] = useState("");
 
   const navigate = useNavigate();
   const param = useParams();
@@ -23,7 +23,7 @@ function ViewProductPage() {
       setName(response.data.data.name);
       setImg(response.data.data.image);
       setPrice(response.data.data.price);
-      setDescr(response.data.data.description);
+      setDescription(response.data.data.description);
     } catch (error) {
       alert(error);
     }
@@ -38,7 +38,7 @@ function ViewProductPage() {
         </div>
         <h2>{name}</h2>
         <h3>Price: {price}</h3>
-        <p>{descr}</p>
+        <p>{description}</p>
       </div>
       <button onClick={() => navigate("/")}>Back to Home</button>
     </div>
