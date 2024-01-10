@@ -10,3 +10,8 @@ IP:::1, Method: DELETE, Endpoint: /assignments/3
 IP:::1, Method: GET, Endpoint: /
 IP:::1, Method: GET, Endpoint: /assignments
 IP:::1, Method: GET, Endpoint: /assignments/2
+IP:::1, Method: GET, Endpoint: /
+IP:::1, Method: POST, Endpoint: /assignments
+IP:::1, Method: POST, Endpoint: /assignments
+IP:::1, Method: POST, Endpoint: /assignments
+IP:::1, Method: POST, Endpoint: /assignments

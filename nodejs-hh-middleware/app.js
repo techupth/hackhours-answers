@@ -1,6 +1,5 @@
 import express from "express";
 import assignmentRouter from "./apps/assignments.js";
-import validateAssignmentData from "./middleware/assignmentValidation.js";
 import loggingMiddleware from "./middleware/loggingMiddleware.js";
 
 const app = express();
