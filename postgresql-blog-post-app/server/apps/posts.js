@@ -14,6 +14,7 @@ postRouter.get("/", async (req, res) => {
 
     let query = "";
     let values = [];
+
     if (status && keywords) {
       query =
         "select * ,count(*)over() from posts where status=$1 and title ilike $2 limit $3 offset $4";
@@ -34,15 +35,16 @@ postRouter.get("/", async (req, res) => {
     const result = await pool.query(query, values);
 
     let totalResultCount = 0;
+
     if (result.rows.length != 0) {
       totalResultCount = result.rows[0].count;
     }
+
     return res.json({
       data: result.rows,
       total_pages: Math.ceil(totalResultCount / PAGE_SIZE),
     });
   } catch (error) {
-    console.log(error);
     return res.json({
       message: Error`${error}`,
     });
