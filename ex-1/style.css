@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, hsl(0, 100%, 70%), hsl(240, 100%, 70%));
+}
+
+main {
+  width: 500px;
+  background-color: hsla(0, 50%, 100%, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+p {
+  margin: 10px 5px 0 5px;
+}
