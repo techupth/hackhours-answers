@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  font-size: 72px;
+  text-align: center;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+}
+
+.box-1 {
+  height: 100vh;
+  background-color: lightgrey;
+  padding: 16px;
+}
+
+.box-2 {
+  background-color: black;
+  padding: 16px;
+}
+
+.box-3 {
+  background-color: crimson;
+  padding: 24px;
+}
+
+.box-4 {
+  background-color: khaki;
+  padding: 30px;
+}

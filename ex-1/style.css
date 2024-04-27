@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "sarabun";
+}
+
+.title {
+  background-color: #92aabd;
+  width: 100vw;
+  font-size: 16px;
+  padding: 39.5px 55px;
+  color: #183b56;
+  font-weight: 700;
+  height: 120px;
+}
+
+.card-list {
+  border: solid 3px #183b56;
+  margin: 55px;
+  padding: 8px 25px;
+  width: 40%;
+  background-color: #e4e9ed;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 3px 0;
+}
+
+h2,
+p {
+  color: #183b56;
+  margin: 10px 0px;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Redacted Script";
+  font-style: normal;
+}
