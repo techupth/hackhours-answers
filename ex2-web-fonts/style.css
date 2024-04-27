@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "2005_iannnnnCPU";
+  src: url("./fonts/2005_iannnnnCPU.ttf");
+}
+
+body {
+  font-family: "2005_iannnnnCPU";
+  font-size: 40px;
+}
