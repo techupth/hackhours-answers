@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.holygrail {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: coral;
+}
+
+.holygrail-header {
+  display: flex;
+  justify-content: center;
+  background-color: darkcyan;
+  padding: 50px;
+}
+
+.holygrail-body {
+  display: flex;
+  flex: 1;
+}
+
+.holygrail-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border: 1px solid white;
+  flex: 0 0 12em;
+}
+
+.holygrail-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border: 1px solid white;
+  flex: 1;
+}
+
+.holygrail-ads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border: 1px solid white;
+  flex: 0 0 12em;
+}
+
+.holygrail-footer {
+  display: flex;
+  justify-content: center;
+  background-color: khaki;
+  padding: 40px;
+}
