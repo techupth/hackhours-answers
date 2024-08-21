@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Flexbox Exercise 1: CSS Landing Page</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <img src="./vectors/logo.svg" alt="logo" height="40" />
+        <div class="menu">
+          <p>Home</p>
+          <p>Features</p>
+          <p>Pricing</p>
+          <p>Contact</p>
+        </div>
+      </div>
+    </nav>
+    <div class="contents">
+      <div class="hero-section">
+        <div class="app">
+          <p class="app-title">🌈️ Acme Productivity App</p>
+        </div>
+        <div class="headline">
+          <h1>Boost Your <em>Product</em>ivity</h1>
+          <h3>
+            Streamline your workflow with our all-in-one productivity app.
+          </h3>
+        </div>
+        <button>Start Free Trial</button>
+      </div>
+      <div class="features-section">
+        <div class="feature first">
+          <div class="vector">
+            <img src="./vectors/vector-rocket.svg" />
+          </div>
+          <div class="feature-detail">
+            <h3>Streamlined Workflows</h3>
+            <p class="description">
+              Automate repetitive tasks and focus on high-impact work with our
+              powerful productivity features.
+            </p>
+          </div>
+        </div>
+        <div class="feature second">
+          <div class="vector">
+            <img src="./vectors/vector-board.svg" />
+          </div>
+          <div class="feature-detail">
+            <h3>Blazing Fast Performance</h3>
+            <p class="description">
+              Experience lightning-fast performance and instant responsiveness
+              with our cutting-edge technology.
+            </p>
+          </div>
+        </div>
+        <div class="feature third">
+          <div class="vector">
+            <img src="./vectors/vector-smile.svg" />
+          </div>
+          <div class="feature-detail">
+            <h3>Intuitive Interface</h3>
+            <p class="description">
+              Our user-friendly interface makes it easy for anyone to streamline
+              their workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-section">
+        <h2>Get in Touch</h2>
+        <form>
+          <div class="input">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="John Doe" />
+          </div>
+          <div class="input">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="john@example.com" />
+          </div>
+          <div class="input">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              type="text"
+              rows="3"
+              placeholder="Your message..."
+            ></textarea>
+          </div>
+        </form>
+        <button>Submit</button>
+      </div>
+    </div>
+    <footer>
+      <p class="copy-right">Acme productivity app ©2024</p>
+      <div class="footer">
+        <p>FAQ</p>
+        <p>Terms</p>
+        <p>AI Policy</p>
+        <p>Pricing</p>
+      </div>
+    </footer>
+  </body>
+</html>
