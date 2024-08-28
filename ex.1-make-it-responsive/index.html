@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind CSS Exercise 1: Tailwind CSS Landing Page</title>
+  </head>
+  <body>
+    <nav class="bg-[#f6f6fb]">
+      <div class="fixed left-0 z-50 w-full p-4 md:p-6">
+        <div
+          class="bg-white w-full py-3 px-6 lg:px-20 rounded-full flex justify-between items-center shadow-md"
+        >
+          <img
+            src="./vectors/logo.svg"
+            alt="logo"
+            height="40"
+            class="cursor-pointer"
+          />
+          <div class="hidden lg:flex gap-12">
+            <p class="hover:underline hover:text-[#5e44ff] cursor-pointer">
+              Home
+            </p>
+            <p class="hover:underline hover:text-[#5e44ff] cursor-pointer">
+              Features
+            </p>
+            <p class="hover:underline hover:text-[#5e44ff] cursor-pointer">
+              Pricing
+            </p>
+            <p class="hover:underline hover:text-[#5e44ff] cursor-pointer">
+              Contact
+            </p>
+          </div>
+          <div class="lg:hidden group relative">
+            <img
+              src="./vectors/menu.svg"
+              class="lg:hidden cursor-pointer"
+              tabindex="0"
+            />
+            <div
+              class="invisible absolute top-14 -right-6 bg-white flex flex-col justify-center items-center gap-2 rounded-3xl group-focus-within:visible py-3 px-6 shadow-md"
+            >
+              <p
+                class="hover:underline hover:text-[#5e44ff] cursor-pointer px-6 py-4"
+              >
+                Home
+              </p>
+              <p
+                class="hover:underline hover:text-[#5e44ff] cursor-pointer px-6 py-4"
+              >
+                Features
+              </p>
+              <p
+                class="hover:underline hover:text-[#5e44ff] cursor-pointer px-6 py-4"
+              >
+                Pricing
+              </p>
+              <p
+                class="hover:underline hover:text-[#5e44ff] cursor-pointer px-6 py-4"
+              >
+                Contact
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col items-center gap-40 lg:px-[120px] md:px-6 px-4 py-20 bg-[#f6f6fb]"
+    >
+      <div class="flex flex-col items-center gap-10 pt-[100px]">
+        <div
+          class="bg-[#563aff1a] w-[236px] h-10 p-2 rounded-full flex justify-center items-center"
+        >
+          <p class="text-[#5e44ff]">🌈️ Acme Productivity App</p>
+        </div>
+        <div class="flex flex-col items-center gap-6 w-full">
+          <h1 class="w-full text-center text-[44px] md:text-[80px] font-bold">
+            Boost Your <em class="text-[#5e44ff] not-italic">Product</em>ivity
+          </h1>
+          <h3 class="text-center text-[24px] font-semibold px-4">
+            Streamline your workflow with our all-in-one productivity app.
+          </h3>
+        </div>
+        <button
+          class="px-9 py-4 rounded-2xl bg-[#1A1A2C] text-white cursor-pointer font-semibold text-lg hover:bg-[#5f5f76] focus:ring-[#5F5F76] focus:ring-4 focus:bg-[ #35354D]"
+        >
+          Start Free Trial
+        </button>
+      </div>
+      <div
+        class="flex flex-col md:flex-row justify-center gap-5 max-w-[1200px]"
+      >
+        <div
+          class="bg-[#d7e5f6] w-full p-7 rounded-3xl flex flex-col flex-1 gap-10 transform hover:scale-105 transition-transform"
+        >
+          <div
+            class="w-[60px] h-[60px] bg-white bg-opacity-60 rounded-2xl flex justify-center items-center"
+          >
+            <img src="./vectors/vector-rocket.svg" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="text-[24px] font-semibold">Streamlined Workflows</h3>
+            <p class="text-[#5f5f76]">
+              Automate repetitive tasks and focus on high-impact work with our
+              powerful productivity features.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-[#D8E0FC] w-full p-7 rounded-3xl flex flex-col flex-1 gap-10 transform hover:scale-105 transition-transform"
+        >
+          <div
+            class="w-[60px] h-[60px] bg-white bg-opacity-60 rounded-2xl flex justify-center items-center"
+          >
+            <img src="./vectors/vector-board.svg" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="text-[24px] font-semibold">Blazing Fast Performance</h3>
+            <p class="text-[#5f5f76]">
+              Experience lightning-fast performance and instant responsiveness
+              with our cutting-edge technology.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-[#E8DCF6] w-full p-7 rounded-3xl flex flex-col flex-1 gap-10 transform hover:scale-105 transition-transform"
+        >
+          <div
+            class="w-[60px] h-[60px] bg-white bg-opacity-60 rounded-2xl flex justify-center items-center"
+          >
+            <img src="./vectors/vector-smile.svg" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="text-[24px] font-semibold">Intuitive Interface</h3>
+            <p class="text-[#5f5f76]">
+              Our user-friendly interface makes it easy for anyone to streamline
+              their workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full max-w-[1200px] bg-white rounded-3xl px-5 py-[60px] md:py-20 md:px-[120px] lg:px-[305px] flex flex-col items-center justify-center gap-10"
+      >
+        <h2 class="text-center text-[44px] font-bold">Get in Touch</h2>
+        <form class="flex flex-col gap-5 w-full lg:w-[590px]">
+          <div class="flex flex-col gap-1">
+            <label for="name" class="text-[#5f5f76]">Name</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="John Doe"
+              class="p-3 pl-4 rounded-xl border border-[#e0e0ed] focus:border-[#5E44FF] hover:border-[#B5A9FF] outline-none"
+            />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label for="email" class="text-[#5f5f76]">Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="john@example.com"
+              class="p-3 pl-4 rounded-xl border border-[#e0e0ed] focus:border-[#5E44FF] hover:border-[#B5A9FF] outline-none"
+            />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label for="message" class="text-[#5f5f76]">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              type="text"
+              rows="3"
+              placeholder="Your message..."
+              class="p-3 pl-4 rounded-xl border border-[#e0e0ed] focus:border-[#5E44FF] hover:border-[#B5A9FF] outline-none"
+            ></textarea>
+          </div>
+        </form>
+        <button
+          class="w-full lg:w-[590px] px-9 py-4 rounded-2xl bg-[#1A1A2C] text-white cursor-pointer font-semibold text-lg hover:bg-[#5f5f76] focus:ring-[#5F5F76] focus:ring-4 focus:bg-[ #35354D]"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+    <footer
+      class="bg-[#f6f6fb] lg:px-[120px] md:px-6 px-4 pb-20 flex md:flex-row flex-col gap-6 md:justify-between items-center"
+    >
+      <p class="text-[#5f5f76]">Acme productivity app ©2024</p>
+      <div class="flex gap-9">
+        <p class="hover:underline hover:text-[#5e44ff] cursor-pointer">FAQ</p>
+        <p class="hover:underline hover:text-[#5e44ff] cursor-pointer">Terms</p>
+        <p class="hover:underline hover:text-[#5e44ff] cursor-pointer">
+          AI Policy
+        </p>
+        <p class="hover:underline hover:text-[#5e44ff] cursor-pointer">
+          Pricing
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
