@@ -1,0 +1,167 @@
+/* Start coding here */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 20vh;
+  margin-top: 5vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700px;
+  color: #183b56;
+}
+
+.line {
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    #ff8345,
+    hsla(20, 100%, 64%, 1)
+  );
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
+  color: #183b56;
+  position: absolute;
+  top: 170px;
+  left: 30px;
+}
+
+h4 {
+  font-family: "DM Sans", sans-serif;
+  color: #5a7184;
+  font-size: 1rem;
+  font-weight: 400;
+  position: absolute;
+  top: 210px;
+  left: 30px;
+}
+
+h3 {
+  position: absolute;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  font-size: 1.5rem;
+  color: white;
+  width: 136px;
+  height: 102px;
+  top: 80px;
+  padding-left: 25px;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1900px;
+  min-width: 450px;
+  width: 100vw;
+  height: 50vh;
+}
+
+.job-item,
+.job-more {
+  position: relative;
+  width: 333px;
+  height: 268px;
+  padding: 30px;
+  margin: 20px 30px;
+  padding-right: 125px;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+}
+
+.job-item:hover {
+  background: rgba(179, 186, 197, 0.1);
+  cursor: pointer;
+}
+
+.job-more {
+  position: relative;
+  cursor: pointer;
+  padding: 0px;
+  background-color: #ff8345;
+  width: 333px;
+  height: 268px;
+  border-radius: 8px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsla(20, 100%, 64%, 0.1);
+}
+
+.icon2 {
+  background-color: #ff8345;
+}
+
+.pic img {
+  width: 40px;
+  height: 40px;
+}
+
+/* arrow */
+.arrow {
+  position: absolute;
+  top: 214px;
+  left: 283px;
+  width: 32px;
+  height: 32px;
+}
+
+.explore-more-arrow {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 130px;
+  left: 242px;
+}
+
+.first-line {
+  position: absolute;
+  opacity: 0.5;
+  bottom: 200px;
+  left: 90px;
+}
+
+.second-line {
+  position: absolute;
+  opacity: 0.5;
+  bottom: 160px;
+  left: 50px;
+}
+
+.third-line {
+  position: absolute;
+  opacity: 0.5;
+  top: 183px;
+  left: 0px;
+}
+
+.fourth-line {
+  position: absolute;
+  opacity: 0.5;
+  top: 230px;
+  left: 0px;
+}
