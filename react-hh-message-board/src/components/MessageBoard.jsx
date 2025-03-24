@@ -6,15 +6,12 @@ function MessageBoard() {
 
   function handleAddMessage(event) {
     event.preventDefault();
-    const newMessages = [...messages];
-    newMessages.push(messageText);
-    setMessage(newMessages);
-    setMessageText("");
+    setMessage([...messages, messageText]); 
+    setMessageText(""); 
   }
 
   function handleDeleteMessage(messageIndex) {
-    const newMessages = [...messages];
-    newMessages.splice(messageIndex, 1);
+    const newMessages = messages.filter((item, index) => index !== messageIndex);
     setMessage(newMessages);
   }
 
