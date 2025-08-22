@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React, { useContext } from "react";
-import { UserDataContext } from "../App";
+import { UserDataContext } from "../contexts/UserDataContext";
 
 function ViewProductPage() {
   const navigate = useNavigate();
